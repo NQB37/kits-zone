@@ -51,56 +51,54 @@ const Carousel = () => {
     };
 
     return (
-        <div className="carousel w-dvw h-dvh overflow-hidden mt-[-48px] relative">
-            return (
-            <div
-                key={images[curIndex].id}
-                className="item absolute top-0 bottom-0 left-0 right-0"
-            >
+        <div className="carousel relative w-dvw h-dvh overflow-hidden mt-[-48px]">
+            <div key={images[curIndex].id} className="item">
                 <img
                     src={images[curIndex].url}
                     alt={images[curIndex].alt}
                     className="h-full w-full object-cover"
                 />
-                <div className="content absolute top-[60%] left-[10%] w-3/12 text-center text-primary mx-4 my-4 drop-shadow-md">
-                    <div className="title text-6xl font-bold">
-                        {images[curIndex].title}
+                <div className="grid grid-cols-12 w-[80%] gap-6 absolute top-[60%] left-1/2 -translate-x-1/2">
+                    <div className="content col-span-4 text-center text-primary drop-shadow-md">
+                        <div className="title text-6xl font-bold">
+                            {images[curIndex].title}
+                        </div>
+                        <div className="des my-4">{images[curIndex].des}</div>
+                        <div className="showMoreButton">
+                            <button className="w-[150px] h-[30px] bg-primary text-white rounded-md">
+                                READ MORE
+                            </button>
+                        </div>
                     </div>
-                    <div className="des my-4">{images[curIndex].des}</div>
-                    <div className="showMoreButton">
-                        <button className="w-[150px] h-[30px] bg-primary text-white rounded-md">
-                            READ MORE
+                    <div className="thumbnail col-span-8 w-[1000px] flex gap-5 my-4 mx-4 items-center justify-center">
+                        <button
+                            onClick={handlePrevClick}
+                            className="prevButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
+                        >
+                            &lt;
+                        </button>
+                        {images.map((image) => {
+                            return (
+                                <div
+                                    key={image.id}
+                                    className="thumnail-item w-40 h-60 border-2 border-primary drop-shadow-md rounded-md overflow-hidden"
+                                >
+                                    <img
+                                        src={image.url}
+                                        alt={image.alt}
+                                        className="h-full w-full object-cover rounded-md"
+                                    />
+                                </div>
+                            );
+                        })}
+
+                        <button
+                            onClick={handleNextClick}
+                            className="nextButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
+                        >
+                            &gt;
                         </button>
                     </div>
-                </div>
-                <div className="thumbnail absolute top-[60%] left-[40%] w-[1000px] h-60 flex gap-5 my-4 mx-4 items-center justify-center">
-                    <button
-                        onClick={handlePrevClick}
-                        className="prevButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
-                    >
-                        &lt;
-                    </button>
-                    {images.map((image) => {
-                        return (
-                            <div
-                                key={image.id}
-                                className="thumnail-item w-40 h-60 border-2 border-primary drop-shadow-md rounded-md overflow-hidden"
-                            >
-                                <img
-                                    src={image.url}
-                                    alt={image.alt}
-                                    className="h-full w-full object-cover rounded-md"
-                                />
-                            </div>
-                        );
-                    })}
-
-                    <button
-                        onClick={handleNextClick}
-                        className="nextButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
-                    >
-                        &gt;
-                    </button>
                 </div>
             </div>
             );
