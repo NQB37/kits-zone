@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+
 function Header() {
     const [searchStatus, setSearchStatus] = useState(false);
 
@@ -19,11 +20,6 @@ function Header() {
                         </Link>
                     </ul>
                     <ul className="basis-8/12 flex items-center justify-start gap-10 px-10 h-full">
-                        {/* <li className="ct-nav-item">
-                            <a href="" className="">
-                                HOME
-                            </a>
-                        </li> */}
                         <li className="ct-nav-item">
                             <NavLink to="/Collection" className="">
                                 COLLECTION
@@ -39,9 +35,12 @@ function Header() {
                             <NavLink to="/Tool">TOOLS</NavLink>
                         </li>
                     </ul>
-                    <ul className="basis-3/12 flex items-center justify-end gap-4">
-                        <li onClick={handleSearch} className="relative">
-                            <i className="fa-solid fa-magnifying-glass text-primary"></i>
+                    <ul className="basis-3/12 flex items-center justify-end gap-10">
+                        <li className="relative">
+                            <i
+                                onClick={handleSearch}
+                                className="fa-solid fa-magnifying-glass text-primary"
+                            ></i>
                             {searchStatus && (
                                 <form
                                     action=""
@@ -50,12 +49,13 @@ function Header() {
                                     <input
                                         type="search"
                                         id="seach"
-                                        className="text-primary bg-transparent border-primary border-[1px] w-full duration-100"
+                                        className="text-primary bg-transparent border-primary border-[1px] w-full px-4 duration-100"
                                         placeholder="Search..."
                                     />
                                 </form>
                             )}
                         </li>
+
                         <li className="ct-nav-item">
                             <a href="">SIGN IN</a>
                         </li>
