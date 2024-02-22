@@ -5,19 +5,44 @@ const Footer = () => {
                 <h1>Contact Us</h1>
 
                 <div className="footer--contact--logo flex justify-around items-center gap-4">
-                    <a href="" className="hover:text-primary">
+                    <a
+                        href="https://www.facebook.com"
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="" className="hover:text-primary">
+                    <a
+                        href="https://www.tiktok.com"
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className="fa-brands fa-tiktok" />
                     </a>
-                    <a href="" className="hover:text-primary">
+                    <a
+                        href="https://www.behance.net"
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className="fa-brands fa-behance"></i>
                     </a>
-                    <a href="" className="hover:text-primary">
+                    <a
+                        href="https://www.youtube.com"
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="" className="hover:text-primary">
+                    <a
+                        href="https://www.instagram.com"
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -38,12 +63,12 @@ const Footer = () => {
                     >
                         <input
                             type="email"
-                            className="basis-9/12 px-4 bg-transparent border-[1px] h-10"
+                            className="basis-8/12 px-4 bg-transparent border-[1px] h-10"
                             placeholder="CUSTOMER@EMAIL.COM"
                         />
                         <button
                             type="submit"
-                            className="basis-3/12 bg-primary h-10"
+                            className="basis-4/12 bg-primary h-10"
                         >
                             JOIN!
                         </button>
