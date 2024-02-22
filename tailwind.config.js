@@ -6,6 +6,7 @@ export default {
             colors: {
                 primary: '#CD9852',
                 secondary: '#242632',
+                background: '#132028',
             },
             width: {
                 content: 'max-content',
