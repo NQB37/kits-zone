@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
+
 const images = [
     {
         id: 1,
@@ -51,7 +53,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="carousel relative w-dvw h-dvh overflow-hidden mt-[-48px]">
+        <div className="carousel relative w-full h-dvh overflow-hidden mt-[-48px]">
             <div key={images[curIndex].id} className="item">
                 <img
                     src={images[curIndex].url}
@@ -70,12 +72,12 @@ const Carousel = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="thumbnail col-span-8 w-[1000px] flex gap-5 my-4 mx-4 items-center justify-center">
+                    <div className="thumbnail col-span-8 w-[1000px] flex gap-5 items-center justify-center">
                         <button
                             onClick={handlePrevClick}
-                            className="prevButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
+                            className="prevButton text-primary text-4xl drop-shadow-md  hover:scale-125 transition-all ease-in-out duration-200"
                         >
-                            &lt;
+                            <i className="fa-solid fa-angle-left"></i>
                         </button>
                         {images.map((image) => {
                             return (
@@ -91,17 +93,15 @@ const Carousel = () => {
                                 </div>
                             );
                         })}
-
                         <button
                             onClick={handleNextClick}
-                            className="nextButton text-primary text-5xl drop-shadow-md font-thin hover:scale-125 transition-all ease-in-out duration-100"
+                            className="nextButton text-primary text-4xl drop-shadow-md  hover:scale-125 transition-all ease-in-out duration-100"
                         >
-                            &gt;
+                            <i className="fa-solid fa-angle-right"></i>
                         </button>
                     </div>
                 </div>
             </div>
-            );
         </div>
     );
 };
