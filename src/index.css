@@ -1,3 +1,132 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ct-nav-item {
+    @apply cursor-pointer text-primary relative hover:opacity-90 after:absolute after:bg-red-50 after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-200;
+}
+
+.carousel .item:nth-child(1) {
+    z-index: 1;
+}
+
+/* effect when show image */
+.carousel .item:nth-child(1) .title,
+.carousel .item:nth-child(1) .des,
+.carousel .item:nth-child(1) .showMoreButton {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+}
+
+.carousel .item:nth-child(1) .title {
+    animation-delay: 0.1s;
+}
+
+.carousel .item:nth-child(1) .des {
+    animation-delay: 0.3s;
+}
+.carousel .item:nth-child(1) .titlshowMoreButtone {
+    animation-delay: 0.5s;
+}
+
+effect when click next btn .carousel.next .item:nth-child(1) > img {
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    left: 43.6%;
+    top: 62%;
+    border-radius: 6px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+    }
+}
+
+/* move thumbnail image when click */
+.corousel.nect .thumnail .thumbnail-item:nth-last-child(1) {
+    width: 0px;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    to {
+        width: 160px;
+    }
+}
+
+.carousel.next .thumbnail .thumnail-item {
+    transform: translateX(160px);
+    animation: moveThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes moveThumbnail {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* effect when click next btn */
+/* .carousel.prev .item:nth-child(2) > img {
+    z-index: 2;
+}
+
+.carousel.prev .item:nth-child(2) > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to {
+        width: 160px;
+        height: 240px;
+        left: 43.6%;
+        top: 62%;
+    }
+}
+
+.corousel.prev .thumbnail .item:nth-child(1) {
+    whidth: 0px;
+    overflow: hidden;
+    opacity: 0;
+    animation: moveThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .item:nth-child(2) .title,
+.carousel.prev .item:nth-child(2) .des,
+.carousel.prev .item:nth-child(2) .showMoreButton {
+    animation: outContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes outContent {
+    to {
+        transform: translateX(160px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.carousel.next .thumbnail button,
+.carousel.prev .thumbnail button {
+    pointer-events: none;
+} */
