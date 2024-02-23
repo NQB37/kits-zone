@@ -39,6 +39,11 @@ const images = [
     },
 ];
 
+// let nextDom = document.getElementById('nextButton');
+// let prevDom = document.getElementById('nextButton');
+
+// let carouselDom = document.querySelector('.carousel');
+
 const Carousel = () => {
     const [curIndex, setIndex] = useState(0);
 
@@ -53,7 +58,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="carousel relative w-full h-dvh overflow-hidden mt-[-48px]">
+        <div className="carousel next relative w-full h-dvh overflow-hidden -mt-16">
             <div key={images[curIndex].id} className="item">
                 <img
                     src={images[curIndex].url}
@@ -62,11 +67,13 @@ const Carousel = () => {
                 />
                 <div className="grid grid-cols-12 w-[80%] gap-6 absolute top-[60%] left-1/2 -translate-x-1/2">
                     <div className="content col-span-4 text-center text-primary drop-shadow-md">
-                        <div className="title text-6xl font-bold">
+                        <div className="content__title text-6xl font-bold">
                             {images[curIndex].title}
                         </div>
-                        <div className="des my-4">{images[curIndex].des}</div>
-                        <div className="showMoreButton">
+                        <div className="content__des my-4">
+                            {images[curIndex].des}
+                        </div>
+                        <div className="content__showMoreButton">
                             <button className="w-[150px] h-[30px] bg-primary text-white rounded-md">
                                 READ MORE
                             </button>
@@ -74,6 +81,7 @@ const Carousel = () => {
                     </div>
                     <div className="thumbnail col-span-8 w-[1000px] flex gap-5 items-center justify-center">
                         <button
+                            id="prevButton"
                             onClick={handlePrevClick}
                             className="prevButton text-primary text-4xl drop-shadow-md  hover:scale-125 transition-all ease-in-out duration-200"
                         >
@@ -94,6 +102,7 @@ const Carousel = () => {
                             );
                         })}
                         <button
+                            id="nextButton"
                             onClick={handleNextClick}
                             className="nextButton text-primary text-4xl drop-shadow-md  hover:scale-125 transition-all ease-in-out duration-100"
                         >
