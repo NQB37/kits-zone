@@ -2,10 +2,6 @@ import Header from '../../components/Header/Header';
 import Carousel from '../../components/Carousel/Carousel';
 import Footer from '../../components/Footer/Footer';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 const images = [
     {
         id: 1,
@@ -64,14 +60,21 @@ const Home = () => {
         <div className="bg-background">
             <Header />
             <Carousel />
-            <div className="w-full">
-                <div className="langding_page-category_filter">
-                    <h1 className="border-b border-b-1 border-primary text-primary text-2xl w-full text-center">
+            <div className="w-[90%] h-[800px] mx-auto">
+                <div className="langding_page-category_filter relative pt-6">
+                    <h1 className=" border-primary text-primary text-2xl w-full text-center pb-2">
                         KITS BY ZONE
                     </h1>
+                    <div className="ct-line">
+                        <div className="w-full h-[1px] bg-primary"></div>
+                        <div className="w-2 h-2 rotate-45 bg-primary absolute top-[86%] left-[50%] -translate-x-1"></div>
+                    </div>
                 </div>
-                <div className="langding_page-new_collection">
-                    <h1>NEW COLLECTIONS</h1>
+                <div className="langding_page-new_collection relative">
+                    <h1 className="border-b border-b-1 border-primary text-primary text-2xl w-full text-center pb-2">
+                        NEW COLLECTIONS
+                    </h1>
+                    <div className="w-2 h-2 rotate-45 bg-primary absolute top-[86%] left-[50%] -translate-x-1"></div>
                 </div>
             </div>
             <Footer />

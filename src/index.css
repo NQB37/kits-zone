@@ -3,25 +3,21 @@
 @tailwind utilities;
 
 .ct-nav-item {
-    @apply cursor-pointer text-primary relative hover:opacity-90 after:absolute after:bg-red-50 after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-200;
+    @apply cursor-pointer text-primary text-lg relative hover:opacity-90 after:absolute after:bg-red-50 after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-200;
 }
 
 .carousel .item:nth-child(1) {
     z-index: 1;
 }
 
-.slick-slide > div {
-    margin-left: 4px;
-}
-
 /* effect when show image */
-.carousel .item:nth-child(1) .title,
-.carousel .item:nth-child(1) .des,
-.carousel .item:nth-child(1) .showMoreButton {
+.carousel .item:nth-child(1) .content__title,
+.carousel .item:nth-child(1) .content__des,
+.carousel .item:nth-child(1) .content__showMoreButton {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent 0.5s 1s linear 1 forwards;
+    animation: showContent 0.5s linear 1 forwards;
 }
 
 @keyframes showContent {
@@ -32,23 +28,24 @@
     }
 }
 
-.carousel .item:nth-child(1) .title {
+.carousel .item:nth-child(1) .content__title {
     animation-delay: 0.1s;
 }
 
-.carousel .item:nth-child(1) .des {
+.carousel .item:nth-child(1) .content__des {
     animation-delay: 0.3s;
 }
-.carousel .item:nth-child(1) .titlshowMoreButtone {
+.carousel .item:nth-child(1) .content__showMoreButton {
     animation-delay: 0.5s;
 }
 
-effect when click next btn .carousel.next .item:nth-child(1) > img {
+/* effect when click next btn  */
+.carousel.next .item:nth-child(1) > img {
     width: 160px;
     height: 240px;
     position: absolute;
-    left: 43.6%;
-    top: 62%;
+    left: 50%;
+    top: 60%;
     border-radius: 6px;
     animation: showImage 0.5s linear 1 forwards;
 }
@@ -88,7 +85,7 @@ effect when click next btn .carousel.next .item:nth-child(1) > img {
 }
 
 /* effect when click next btn */
-/* .carousel.prev .item:nth-child(2) > img {
+.carousel.prev .item:nth-child(2) > img {
     z-index: 2;
 }
 
@@ -116,9 +113,9 @@ effect when click next btn .carousel.next .item:nth-child(1) > img {
     animation: moveThumbnail 0.5s linear 1 forwards;
 }
 
-.carousel.prev .item:nth-child(2) .title,
-.carousel.prev .item:nth-child(2) .des,
-.carousel.prev .item:nth-child(2) .showMoreButton {
+.carousel.prev .item:nth-child(2) .content__title,
+.carousel.prev .item:nth-child(2) .content__des,
+.carousel.prev .item:nth-child(2) .content__showMoreButton {
     animation: outContent 0.5s 1s linear 1 forwards;
 }
 
@@ -132,5 +129,5 @@ effect when click next btn .carousel.next .item:nth-child(1) > img {
 
 .carousel.next .thumbnail button,
 .carousel.prev .thumbnail button {
-    pointer-events: none;
-} */
+    /* pointer-events: none; */
+}
