@@ -13,7 +13,7 @@ const Register = () => {
                         Welcome to KITSZONE
                     </p>
                 </div>
-                <div className="bg-background flex justify-center items-center text-center">
+                <div className="bg-background/90 flex justify-center items-center text-center">
                     <div className="text-yellow-50 w-[400px] flex flex-col justify-around space-y-8">
                         <p className="text-4xl">KITSZONE</p>
                         <a href="" className="">
