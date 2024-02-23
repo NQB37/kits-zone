@@ -1,4 +1,5 @@
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const Collection = () => {
     return (
@@ -7,6 +8,7 @@ const Collection = () => {
             <div className="text-xl font-bold w-dvw h-dvh flex justify-center items-center">
                 Nothing in Collection page yet.
             </div>
+            <Footer />
         </div>
     );
 };
