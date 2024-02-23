@@ -12,11 +12,13 @@ function Header() {
 
     return (
         <>
-            <div className="max-w-screen-2xl mx-auto md:sticky top-4 z-50">
-                <nav className="bg-secondary flex items-center justify-between px-4 h-12 ct-nav">
+            <div className="w-full md:sticky z-50 border-b-2 border-red-400">
+                <nav className="bg-secondary flex items-center justify-between px-20 h-16 ct-nav">
                     <ul className="basis-1/12 flex items-center justify-start">
                         <Link to="/">
-                            <h1 className="text-primary text-xl ">KITS ZONE</h1>
+                            <h1 className="text-primary text-xl font-bold">
+                                KITSZONE
+                            </h1>
                         </Link>
                     </ul>
                     <ul className="basis-8/12 flex items-center justify-start gap-10 px-10 h-full">
@@ -36,7 +38,7 @@ function Header() {
                         </li>
                     </ul>
                     <ul className="basis-3/12 flex items-center justify-end gap-10">
-                        <li className="relative">
+                        <li className="relative text-lg cursor-pointer">
                             <i
                                 onClick={handleSearch}
                                 className="fa-solid fa-magnifying-glass text-primary"
@@ -44,12 +46,12 @@ function Header() {
                             {searchStatus && (
                                 <form
                                     action=""
-                                    className="absolute w-80 top-[35px] right-0 bg-secondary px-4 py-4 -z-40 duration-100"
+                                    className="absolute w-80 top-[35px] right-0 bg-secondary px-4 py-4 -z-40"
                                 >
                                     <input
                                         type="search"
                                         id="seach"
-                                        className="text-primary bg-transparent border-primary border-[1px] w-full px-4 duration-100"
+                                        className="text-primary bg-transparent border-primary border-[1px] w-full px-4"
                                         placeholder="Search..."
                                     />
                                 </form>
@@ -57,7 +59,10 @@ function Header() {
                         </li>
 
                         <li className="ct-nav-item">
-                            <a href="">SIGN IN</a>
+                            <NavLink to="/Account/SignIn">
+                                <i className="fa-solid fa-circle-user mr-2"></i>
+                                SIGN IN
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
