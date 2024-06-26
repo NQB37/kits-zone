@@ -1,59 +1,59 @@
-import Header from '../../components/Header/Header';
-import Carousel from '../../components/Carousel/Carousel';
-import Footer from '../../components/Footer/Footer';
+import Header from '~/components/Header/Header';
+import Carousel from './MainCarousel/Carousel';
+import Footer from '~/components/Footer/Footer';
 
-const images = [
-    {
-        id: 1,
-        url: '../../../public/img/red.jpg',
-        alt: 'bg-red',
-    },
-    {
-        id: 2,
-        url: '../../../public/img/yellow.jpg',
-        alt: 'bg-yellow',
-    },
-    {
-        id: 3,
-        url: '../../../public/img/green.jpg',
-        alt: 'bg-green',
-    },
-    {
-        id: 4,
-        url: '../../../public/img/blue.jpg',
-        alt: 'bg-blue',
-    },
-    {
-        id: 5,
-        url: '../../../public/img/gray.jpg',
-        alt: 'bg-grey',
-    },
-    {
-        id: 6,
-        url: '../../../public/img/black.jpg',
-        alt: 'bg-black',
-    },
-    {
-        id: 7,
-        url: '../../../public/img/brown.jpg',
-        alt: 'bg-brown',
-    },
-    {
-        id: 8,
-        url: '../../../public/img/cyan.jpg',
-        alt: 'bg-cyan',
-    },
-    {
-        id: 9,
-        url: '../../../public/img/orange.jpg',
-        alt: 'bg-orange',
-    },
-    {
-        id: 10,
-        url: '../../../public/img/purple.jpg',
-        alt: 'bg-purple',
-    },
-];
+// const images = [
+//     {
+//         id: 1,
+//         url: '/img/red.jpg',
+//         alt: 'bg-red',
+//     },
+//     {
+//         id: 2,
+//         url: '/img/yellow.jpg',
+//         alt: 'bg-yellow',
+//     },
+//     {
+//         id: 3,
+//         url: '/img/green.jpg',
+//         alt: 'bg-green',
+//     },
+//     {
+//         id: 4,
+//         url: '/img/blue.jpg',
+//         alt: 'bg-blue',
+//     },
+//     {
+//         id: 5,
+//         url: '/img/gray.jpg',
+//         alt: 'bg-grey',
+//     },
+//     {
+//         id: 6,
+//         url: '/img/black.jpg',
+//         alt: 'bg-black',
+//     },
+//     {
+//         id: 7,
+//         url: '/img/brown.jpg',
+//         alt: 'bg-brown',
+//     },
+//     {
+//         id: 8,
+//         url: '/img/cyan.jpg',
+//         alt: 'bg-cyan',
+//     },
+//     {
+//         id: 9,
+//         url: '/img/orange.jpg',
+//         alt: 'bg-orange',
+//     },
+//     {
+//         id: 10,
+//         url: '/img/purple.jpg',
+//         alt: 'bg-purple',
+//     },
+// ];
 
 const Home = () => {
     return (

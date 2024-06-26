@@ -1,48 +1,42 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react';
 
 const images = [
     {
         id: 1,
-        url: '../../../public/img/red.jpg',
+        url: '/img/red.jpg',
         alt: 'bg-red',
         title: 'RED BACKGROUND',
         des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit`. Corrupti est quo odit harum unde autem, cum tempora corporis quae? Alias!',
     },
     {
         id: 2,
-        url: '../../../public/img/yellow.jpg',
+        url: '/img/yellow.jpg',
         alt: 'bg-yellow',
         title: 'YELLOW BACKGROUND',
         des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ad officia debitis corporis libero vitae.',
     },
     {
         id: 3,
-        url: '../../../public/img/green.jpg',
+        url: '/img/green.jpg',
         alt: 'bg-GREEN',
         title: 'GREEN BACKGROUND',
         des: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur voluptas blanditiis inventore. Pariatur, enim distinctio.',
     },
     {
         id: 4,
-        url: '../../../public/img/blue.jpg',
+        url: '/img/blue.jpg',
         alt: 'bg-blue',
         title: 'BLUE BACKGROUND',
         des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure tempora asperiores ut ipsam exercitationem deserunt dolores quaerat consequuntur.',
     },
     {
         id: 5,
-        url: '../../../public/img/gray.jpg',
+        url: '/img/gray.jpg',
         alt: 'bg-grey',
         title: 'GREY BACKGROUND',
         des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam id accusamus unde nostrum consequatur voluptatum consectetur?',
     },
 ];
-
-// let nextDom = document.getElementById('nextButton');
-// let prevDom = document.getElementById('nextButton');
-
-// let carouselDom = document.querySelector('.carousel');
 
 const Carousel = () => {
     const [curIndex, setIndex] = useState(0);
@@ -58,7 +52,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="carousel next relative w-full h-dvh overflow-hidden -mt-16">
+        <div className="carousel relative w-full h-dvh overflow-hidden -mt-16">
             <div key={images[curIndex].id} className="item">
                 <img
                     src={images[curIndex].url}

@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from '../src/pages/Home/Home';
-import Collection from '../src/pages/Collection/Collection';
-import Showcase from '../src/pages/Showcase/Showcase';
-import Tool from '../src/pages/Tool/Tool';
-import Tutorial from '../src/pages/Tutorial/Tutorial';
+import Home from './pages/Home/index';
+import Collection from './pages/Collection/Collection';
+import Showcase from './pages/Showcase/Showcase';
+import Tool from './pages/Tool/Tool';
+import Tutorial from './pages/Tutorial/Tutorial';
 import SignIn from './pages/Auth/SignIn';
 import SignUp from './pages/Auth/SignUp';
 

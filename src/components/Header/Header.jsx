@@ -23,21 +23,30 @@ function Header() {
                     </ul>
                     <ul className="basis-8/12 flex items-center justify-start gap-10 px-10 h-full">
                         <li className="ct-nav-item">
-                            <NavLink to="/Collection" className="">
+                            <NavLink to="/Collection" className="block">
                                 COLLECTION
                             </NavLink>
                         </li>
                         <li className="ct-nav-item">
-                            <NavLink to="/Showcase">SHOWCASE</NavLink>
+                            <NavLink to="/Showcase" className="block">
+                                SHOWCASE
+                            </NavLink>
                         </li>
                         <li className="ct-nav-item">
-                            <NavLink to="/Tutorial">TUTORIALS</NavLink>
+                            <NavLink to="/Tutorial" className="block">
+                                TUTORIALS
+                            </NavLink>
                         </li>
                         <li className="ct-nav-item">
-                            <NavLink to="/Tool">TOOLS</NavLink>
+                            <NavLink to="/Tool" className="block">
+                                TOOLS
+                            </NavLink>
                         </li>
                     </ul>
                     <ul className="basis-3/12 flex items-center justify-end gap-10">
+                        <li className="text-lg cursor-pointer text-primary">
+                            <i className="fa-solid fa-cart-shopping"></i>
+                        </li>
                         <li className="relative text-lg cursor-pointer">
                             <i
                                 onClick={handleSearch}
